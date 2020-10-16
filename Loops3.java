@@ -17,6 +17,7 @@ public class Loops3 {
 		System.out.print("\n");
 		x--;
 	}
+	in.close();
 	}
 
 }

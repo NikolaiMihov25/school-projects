@@ -26,6 +26,7 @@ public class Arrays02 {
 	for(int i = 0; i < 10; i++){
 		System.out.println(myArray[i]);
 	}
+	in.close();
 	}
 
 }

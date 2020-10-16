@@ -64,16 +64,16 @@ public class DoubleArrays04 {
 			}
 			switch(boq) {
 			case 0:
-				System.out.print("clubs");
+				System.out.print("clubs\n");
 				break;
 			case 1:
-				System.out.print("diamonds");
+				System.out.print("diamonds\n");
 				break;
 			case 2:
-				System.out.print("hearts");
+				System.out.print("hearts\n");
 				break;
 			case 3:
-				System.out.print("spades");
+				System.out.print("spades\n");
 				break;
 			}
 		}

@@ -4,15 +4,16 @@ public class Loops2 {
 
 	public static void main(String[] args) {
 		double tuition = 10000;
-		int i = 0;
-		double sum = 0;
-		while (i < 10){
-			tuition = tuition + 6.0 / 100 * tuition;
-			sum += tuition;
-			if (i == 4){System.out.println("The total cost after 4 years is: " + (int)(sum*100)/100.0);}
-			i++;
+		for(int i = 0; i < 10; i++){
+			tuition = 106.0/100*tuition;
 		}
-		System.out.println("The tuition after 10 years is: " + (int)(tuition*100)/100.0);
+		System.out.println("The tuition cost after 10 years is " + (int)(100*tuition)/100.0 + " dollars.");
+		double sum = tuition;
+		for(int i = 1; i < 4; i++){
+			tuition += 6.0/100*tuition;
+			sum += tuition;
+		}
+		System.out.println("The total sum for 4 years is " + (int)(100*sum)/ 100.0 + " dollars.");
 	}
 
 }

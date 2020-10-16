@@ -17,6 +17,7 @@ public class Arrays03 {
 		}
 		myArray[9] = swap;
 		for(int i =0; i<10; i++){System.out.println(myArray[i]);}
+		array.close();
 	}
 
 }

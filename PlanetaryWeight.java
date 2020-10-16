@@ -1,6 +1,6 @@
 package edu.smg;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
