@@ -18,10 +18,10 @@ public class ATM {
 			int id = sc.nextInt();
 			
 			if(id > 9 || id < 0) {System.out.println("Please enter a valid ID");}
-			else {
+			else { 
 				System.out.println(" Enter 1 to check your balance \n Enter 2 to withdraw a sum \n Enter 3 to deposit a sum \n Enter 4 to leave the menu");
 				int enteredNumber = sc.nextInt();
-				
+				while(enteredNumber != 4) {
 				if (enteredNumber == 1) {
 					System.out.println("Your balance is " + acc[id].getBalance());
 				} else if (enteredNumber == 2) {
@@ -37,6 +37,7 @@ public class ATM {
 				} else if (enteredNumber == 4) {
 					System.out.println("You have left the main menu.");
 				} else {System.out.println("Please enter a valid number from the menu.");}
+			}
 			}
 		}
 	}
