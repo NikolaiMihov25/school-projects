@@ -4,20 +4,21 @@ import java.util.Date;
 
 public class Account {
 	private int id = 0;
-	private double balance = 0;
-	private double yearInterestRate = 0;
-	private Date date = new Date();
-	private double monthlyInterestRate =  yearInterestRate / 12 ;
+	protected double balance = 0;
+	private static double yearInterestRate = 0;
+	private Date dateCreated = new Date();
+	private static double monthlyInterestRate =  yearInterestRate / 12 ;
 	Account(){
 		
 	}
+	
 	Account(int id, double balance){
-		this.id = id;
-		this.balance = balance;
+		this.setId(id);
+		this.setBalance(balance);
 	}
 	
 	public Date getDate() {
-		return date;
+		return dateCreated;
 	}
 	
 	public int getId() {
@@ -36,7 +37,7 @@ public class Account {
 		this.balance = balance;
 	}
 	
-	public double getYearInterestRate(){
+	public static double getYearInterestRate(){
 		return yearInterestRate;
 	}
 	
@@ -44,7 +45,7 @@ public class Account {
 		this.yearInterestRate = yearInterestRate;
 	}
 	
-	public double getMonthlyInterestRate() {
+	public static double getMonthlyInterestRate() {
 		return monthlyInterestRate =  yearInterestRate / 12; 
 	}
 	
@@ -52,11 +53,16 @@ public class Account {
 		return monthlyInterestRate * balance / 100;
 	}
 	
-	public void withdraw(double x) {
-		balance -= x;
+	public void withdraw(double draw) {
+		balance -= draw;
 	}
 	
-	public void deposit(double x) {
-		balance += x;
+	public void deposit(double draw) {
+		balance += draw;
 	}
+	
+	public String toString() {
+		return "Balance: " + balance;
+	}
+	
 }
